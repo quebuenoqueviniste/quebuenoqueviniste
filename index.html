@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Nos casamos! Vicky & Juan</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- AUDIO & CONTROLS -->
+    <audio id="bg-music" loop>
+        <source src="assets/music/cancion-boda.mp3" type="audio/mpeg">
+    </audio>
+    <button id="music-toggle-btn" class="music-toggle" aria-label="Reproducir música" style="display: none;">🔊</button>
+
+    <!-- OVERLAYS: THE ENVELOPE -->
+    <div id="envelope-lock" class="envelope-overlay">
+        <div class="envelope-wrapper">
+            <div class="env-back"></div>
+            <div class="env-card">
+                <div class="card-inner">
+                    <h2 class="elegant-title env-title">Juan & Vicky</h2>
+                </div>
+            </div>
+            <div class="env-flap-left"></div>
+            <div class="env-flap-right"></div>
+            <div class="env-flap-bottom"></div>
+            <div class="env-flap-top"></div>
+
+            <div class="env-seal lock-content">
+                <p class="elegant-text strong-text seal-text">Una invitación te espera...</p>
+                <button id="unlock-btn" class="btn-primary">Abrir Invitación</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content" class="content-hidden">
+
+        <!-- SECTION 1: HERO -->
+        <section id="hero" class="scroll-reveal">
+            <!-- CSS Blobs -->
+            <div class="css-blob blob-gold blob-1"></div>
+            <div class="css-blob blob-dark blob-2"></div>
+            
+            <!-- Mockup Framing Elements -->
+            <img src="assets/img/OLIVA1.png" alt="Oliva top right" class="bg-illustration hero-frame-tr">
+            <img src="assets/img/OLIVA2.png" alt="Oliva top left" class="bg-illustration hero-frame-tl">
+            <img src="assets/img/CEIBO2.png" alt="Ceibo middle left" class="bg-illustration hero-frame-l-mid">
+            <img src="assets/img/OLIVA6.png" alt="Oliva bottom left" class="bg-illustration hero-frame-bl">
+            <img src="assets/img/OLIVA3.png" alt="Oliva bottom right" class="bg-illustration hero-frame-br">
+
+            <div class="container text-center hero-content">
+                <h1>¡Nos casamos!</h1>
+                <h2 class="hero-names">Vicky & Juan</h2>
+
+                <div class="countdown-container">
+                    <p class="countdown-label">Faltan:</p>
+                    <div id="countdown" class="countdown">
+                        <div class="time-box"><span id="days">00</span><small>Días</small></div>
+                        <div class="time-box"><span id="hours">00</span><small>Hs</small></div>
+                        <div class="time-box"><span id="mins">00</span><small>Min</small></div>
+                        <div class="time-box"><span id="secs">00</span><small>Seg</small></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: LOCATION & TIME -->
+        <section id="location" class="scroll-reveal">
+            <!-- CSS Blobs -->
+            <div class="css-blob blob-dark blob-3"></div>
+            <div class="css-blob blob-gold blob-4"></div>
+            
+            <!-- Floral Frame Location -->
+            <img src="assets/img/CEIBO3.png" alt="Ceibo top left" class="bg-illustration loc-frame-tl">
+            <img src="assets/img/OLIVA4.png" alt="Oliva top right" class="bg-illustration loc-frame-tr">
+            <img src="assets/img/OLIVA6.png" alt="Oliva left mid" class="bg-illustration loc-frame-l-mid">
+            <img src="assets/img/CEIBO2.png" alt="Ceibo right mid" class="bg-illustration loc-frame-r-mid">
+            <img src="assets/img/OLIVA5.png" alt="Oliva bottom left" class="bg-illustration loc-frame-bl">
+            <img src="assets/img/CEIBO4.png" alt="Ceibo bottom right" class="bg-illustration loc-frame-br">
+
+            <div class="container modern-layout flex-align-stretch space-between">
+                <div class="card-content-left text-center">
+                    <h2 class="elegant-title section-title">El Gran Día</h2>
+                    <p class="elegant-text section-subtitle">Sábado, 20 de Junio de 2026</p>
+                    <h3 class="elegant-title section-title" style="margin-top: 15px; margin-bottom: 0;">Horario</h3>
+                    <div class="time-badge">20:00 hs</div>
+                    <p class="elegant-text margin-top-md text-spaced">
+                        <strong>Finca Caballerizas de la Virgen</strong><br>
+                        Linares, Jaén
+                    </p>
+                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Boda+de+Vicky+y+Juan&dates=20260620T180000Z/20260621T040000Z&details=%C2%A1Celebra+con+nosotros+nuestro+gran+d%C3%ADa!&location=Finca+Caballerizas+de+la+Virgen,+Linares,+Ja%C3%A9n"
+                        target="_blank" class="btn-secondary margin-top-sm">Agendar en Calendario</a>
+                </div>
+                <div class="card-content-right map-container">
+                    <iframe
+                        src="https://maps.google.com/maps?q=Finca%20Caballerizas%20de%20la%20Virgen,%20Linares,%20Jaen&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: DRESS CODE -->
+        <section id="dresscode" class="scroll-reveal">
+            <!-- CSS Blobs -->
+            <div class="css-blob blob-gold blob-5"></div>
+            <div class="css-blob blob-dark blob-1"></div>
+            
+            <!-- Floral Frame Dress Code -->
+            <img src="assets/img/OLIVA1.png" alt="Oliva top right" class="bg-illustration dress-frame-tr">
+            <img src="assets/img/CEIBO1.png" alt="Ceibo bottom left" class="bg-illustration dress-frame-bl">
+            <img src="assets/img/OLIVA5.png" alt="Oliva bottom right" class="bg-illustration dress-frame-br">
+
+            <div class="container text-center">
+                <div class="dresscode-card">
+                    <h2 class="elegant-title section-title">Dress Code</h2>
+                    <img src="assets/img/boceto-novios.png" alt="Boceto de los novios" class="boceto-img">
+                    <p class="elegant-text">Puedes elegir el estilo que más te guste, solo te pedimos un favor:<br>Evita
+                        los
+                        colores <b>verde oliva y rojo</b>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: GIFTS -->
+        <section id="gifts" class="scroll-reveal">
+            <!-- CSS Blobs -->
+            <div class="css-blob blob-dark blob-2"></div>
+            <div class="css-blob blob-gold blob-3"></div>
+            
+            <!-- Floral Frame Gifts -->
+            <img src="assets/img/CEIBO2.png" alt="Ceibo top left" class="bg-illustration gift-frame-tl">
+            <img src="assets/img/OLIVA6.png" alt="Oliva top right" class="bg-illustration gift-frame-tr">
+            <img src="assets/img/CEIBO3.png" alt="Ceibo bottom left" class="bg-illustration gift-frame-bl">
+            <img src="assets/img/OLIVA2.png" alt="Oliva bottom right" class="bg-illustration gift-frame-br">
+            <img src="assets/img/OLIVA3.png" alt="Oliva top center" class="bg-illustration gift-frame-tc">
+            <img src="assets/img/CEIBO4.png" alt="Ceibo bottom center" class="bg-illustration gift-frame-bc">
+
+            <div class="container text-center">
+                <h2 class="elegant-title section-title">Regalos</h2>
+                <img src="assets/img/GIFT.png" alt="Icono de Regalo" class="gift-icon">
+                <p class="elegant-text max-width">Tu presencia será nuestro mejor regalo, pero si igual quieres tener un
+                    detalle con nosotros, puedes hacerlo aquí:</p>
+                <div class="iban-wrapper">
+                    <span id="iban-number" class="iban-text">ES97 1583 0001 1190 6448 8333</span>
+                    <button id="copy-btn" class="btn-secondary">Copiar IBAN</button>
+                    <span id="copy-msg" class="copy-success">¡Copiado!</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: RSVP -->
+        <section id="rsvp" class="scroll-reveal">
+            <!-- CSS Blobs -->
+            <div class="css-blob blob-gold blob-4"></div>
+            <div class="css-blob blob-dark blob-5"></div>
+            
+            <!-- Floral Frame RSVP -->
+            <img src="assets/img/CEIBO3.png" alt="Ceibo top left" class="bg-illustration rsvp-frame-tl">
+            <img src="assets/img/OLIVA4.png" alt="Oliva top right" class="bg-illustration rsvp-frame-tr">
+            <img src="assets/img/OLIVA1.png" alt="Oliva bottom left" class="bg-illustration rsvp-frame-bl">
+            <img src="assets/img/CEIBO2.png" alt="Ceibo bottom right" class="bg-illustration rsvp-frame-br">
+            <img src="assets/img/CEIBO4.png" alt="Ceibo top center" class="bg-illustration rsvp-frame-tc">
+            <img src="assets/img/OLIVA5.png" alt="Oliva bottom center" class="bg-illustration rsvp-frame-bc">
+
+            <div class="container text-center">
+                <h2 class="elegant-title section-title">Confirma tu Asistencia</h2>
+                <p class="elegant-text">Por favor, completa este pequeño formulario.</p>
+
+                <div class="form-placeholder">
+                    <div class="iframe-container">
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSebJTFVQNIBBEa5JE6Ggku8k4YS3L4SffiV0E7hYt8uJHWxlw/viewform?embedded=true" title="Formulario de RSVP" id="google-form-iframe"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Vicky & Juan — 2026</p>
+        </footer>
+    </main>
+
+    <script src="javascript/script.js"></script>
+</body>
+
+</html>
